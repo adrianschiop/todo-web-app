@@ -1,27 +1,24 @@
 import React from 'react';
 
 import './style.css';
-import logoIcon from '../../logo.svg';
+import { PageWrapper } from '../../components/PageWrapper';
 
 export function Login() {
   return (
-    <div className="Main-Content">
-      <div className="Rectangle">
-        <img src={logoIcon} alt="logo" className="Logo" title="Todo app" />
-        <p className="Title">Welcome back!</p>
-        <p className="Subtitle">Log in to continue</p>
+    <PageWrapper>
+      <p className="Log-In-Title">Welcome back!</p>
+      <p className="Log-In-Subtitle">Log in to continue</p>
 
-        <input type="email" className="Email" placeholder="Email" />
-        <input type="password" className="Password" placeholder="Password" />
+      <input type="email" className="Log-In-Email" placeholder="Email" />
+      <input type="password" className="Log-In-Password" placeholder="Password" />
 
-        <a href="/signup">
-          <p className="Access-option">Don't have an account? Sign up.</p>
-        </a>
+      <a href="/signup">
+        <p className="Sign-Up-Option">Don't have an account? Sign up.</p>
+      </a>
 
-        <div className="Action-button-content">
-          <button className="Action-label">Log In</button>
-        </div>
+      <div className="Log-In-Button-Content">
+        <button className="Log-In-Label">Log In</button>
       </div>
-    </div>
+    </PageWrapper>
   );
 }

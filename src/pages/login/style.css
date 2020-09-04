@@ -1,63 +1,33 @@
-.Main-Content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 633px;
-  background-color: #f6f7f8;
-}
-
-.Rectangle {
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  padding: 30px 30px 60px 30px
-}
-
-.Logo {
-  width: 40px;
-  height: 32px;
-  object-fit: contain;
-}
-
-.Title {
+.Log-In-Title {
   font-size: 22px;
   font-weight: bold;
   color: #1f2a4b;
   margin-bottom: 10px;
 }
 
-.Subtitle {
+.Log-In-Subtitle {
   font-size: 16px;
   color: #a1a4ad;
   margin: 0px 0px 10px 0px;
 }
 
-.Full-Name {
+.Log-In-Email {
   font-size: 16px;
   color: #9ea3b2;
 }
 
-.Email {
+.Log-In-Password {
   font-size: 16px;
   color: #9ea3b2;
 }
 
-.Password {
-  font-size: 16px;
-  color: #9ea3b2;
-}
-
-.Access-option {
+.Sign-Up-Option {
   font-size: 14px;
   color: #1f2a4b;
   margin-top: 21px;
 }
 
-.Action-button-content {
+.Log-In-Button-Content {
   height: 36px;
   border-radius: 4px;
   border: solid 1px #4a77e5;
@@ -68,7 +38,7 @@
   align-items: center;
 }
 
-.Action-label {
+.Log-In-Label {
   font-size: 16px;
   color: #ffffff;
 }

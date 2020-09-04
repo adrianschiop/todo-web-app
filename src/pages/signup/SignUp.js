@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { gql, useMutation } from '@apollo/client';
 
 import './style.css';
-import logoIcon from '../../logo.svg';
+import { PageWrapper } from '../../components/PageWrapper';
 
 const SIGN_UP = gql`
   mutation signUp($name: String!, $email: String!, $password: String!) {
@@ -36,31 +36,28 @@ export function SignUp() {
   };
 
   return (
-    <div className="Main-Content">
-      <form onSubmit={handleFormSubmit}>
-        <div className="Rectangle">
-          <img src={logoIcon} alt="logo" className="Logo" title="Todo app" />
-          <p className="Title">Welcome!</p>
-          <p className="Subtitle">Sign up to start using Simpledo today.</p>
+    <PageWrapper>
+      <form onSubmit={handleFormSubmit} className="Sign-Up-Form-Submit">
+        <p className="Sign-Up-Title">Welcome!</p>
+        <p className="Sign-Up-Subtitle">Sign up to start using Simpledo today.</p>
 
-          <input name="name" type="text" className="Full-Name" placeholder="Full Name" onChange={handleInputChange} value={values.name} />
-          <input name="email" type="email" className="Email" placeholder="Email" onChange={handleInputChange} value={values.email} />
-          <input name="password" type="password" className="Password" placeholder="Password" onChange={handleInputChange} value={values.password} />
+        <input name="name" type="text" className="Sign-Up-Full-Name" placeholder="Full Name" onChange={handleInputChange} value={values.name} />
+        <input name="email" type="email" className="Sign-Up-Email" placeholder="Email" onChange={handleInputChange} value={values.email} />
+        <input name="password" type="password" className="Sign-Up-Password" placeholder="Password" onChange={handleInputChange} value={values.password} />
 
-          <a href="/">
-            <p className="Access-option">Do have an account? Sign in.</p>
-          </a>
+        <a href="/">
+          <p className="Log-In-Option">Do have an account? Sign in.</p>
+        </a>
 
-          <div className="Action-button-content">
-            <button type="submit" className="Action-label" disabled={loading || !values.name || !values.email || !values.password}>
-              Sign up
+        <div className="Sign-Up-Button-Content">
+          <button type="submit" className="Sign-Up-Label" disabled={loading || !values.name || !values.email || !values.password}>
+            Sign up
             </button>
-          </div>
-          {
-            error && <p>Ops! Could not complete your request ...</p>
-          }
         </div>
+        {
+          error && <p>Ops! Could not complete your request ...</p>
+        }
       </form>
-    </div>
+    </PageWrapper>
   );
 }
