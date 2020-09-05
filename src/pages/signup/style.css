@@ -1,3 +1,4 @@
+/* @Feedback: Quite a couple of classes could be reused between the Login and Signup forms, so we could avoid duplicating code. */
 .Sign-Up-Title {
   font-size: 22px;
   font-weight: bold;
