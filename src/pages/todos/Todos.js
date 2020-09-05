@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.css';
 import deleteIcon from './deleteIcon.svg';
-import { PageWrapper } from '../../components/PageWrapper';
+import { PageWrapper } from '../components/PageWrapper';
 
 const HARDCODED_TODO_LIST = [
   { id: 1, label: "Make a todo list" },

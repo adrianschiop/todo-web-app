@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { gql, useMutation } from '@apollo/client';
 
 import './style.css';
-import { PageWrapper } from '../../components/PageWrapper';
+import { PageWrapper } from '../components/PageWrapper';
+
+import { useDispatch } from 'react-redux';
+import { auth } from '../../redux/actions';
 
 const SIGN_UP = gql`
-  mutation signUp($name: String!, $email: String!, $password: String!) {
+  mutation signUp($name: String!, $email: Email!, $password: Password!) {
     signUp(name: $name, email: $email, password: $password) {
       token
       refreshToken
@@ -14,6 +17,8 @@ const SIGN_UP = gql`
 `;
 
 export function SignUp() {
+  const dispatch = useDispatch();
+
   const [signUp, { loading, error, data }] = useMutation(SIGN_UP);
   const [values, setValues] = useState({});
 
@@ -28,6 +33,8 @@ export function SignUp() {
 
     try {
       const { data } = await signUp({ variables: { name: values.name, email: values.email, password: values.password } });
+      dispatch(auth(data.signUp));
+      window.location = '/todos';
       //TODO: Save tokens & redirect
     }
     catch (e) {

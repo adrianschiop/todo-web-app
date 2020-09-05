@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './style.css';
-import logoIcon from '../logo.svg';
+import logoIcon from '../../logo.svg';
 
 export function PageWrapper({ children }) {
   return (

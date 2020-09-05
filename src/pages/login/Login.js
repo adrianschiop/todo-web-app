@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './style.css';
-import { PageWrapper } from '../../components/PageWrapper';
+import { PageWrapper } from '../components/PageWrapper';
 
 export function Login() {
   return (
