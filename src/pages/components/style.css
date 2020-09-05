@@ -8,6 +8,7 @@
   background-color: #f6f7f8;
 }
 
+/* @Feedback: Class name could be more suggestive. */
 .Rectangle {
   display: flex;
   flex-direction: column;

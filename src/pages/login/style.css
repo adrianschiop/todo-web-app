@@ -11,6 +11,9 @@
   margin: 0px 0px 10px 0px;
 }
 
+/* @Feedback: Since the following two classes have the same definitions
+it sould be a single class with the name `input` or similar.
+*/
 .Log-In-Email {
   font-size: 16px;
   color: #9ea3b2;
@@ -27,6 +30,7 @@
   margin-top: 21px;
 }
 
+/* @Feedback: Would Log-In-Button-Container be a more appropriate name? */
 .Log-In-Button-Content {
   height: 36px;
   border-radius: 4px;
@@ -38,6 +42,7 @@
   align-items: center;
 }
 
+/* @Feedback: Name is missleading since it is used on a button not a label. */
 .Log-In-Label {
   font-size: 16px;
   color: #ffffff;

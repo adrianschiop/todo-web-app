@@ -1,6 +1,7 @@
+// @Feedback: It is great if the file and the default export are named the same.
 const loggedReducer = (state = null, action) => {
   switch (action.type) {
-    case 'LOGIN':
+    case "LOGIN":
       if (action.payload && action.payload.token) {
         return action.payload;
       }
@@ -9,6 +10,6 @@ const loggedReducer = (state = null, action) => {
     default:
       return state;
   }
-}
+};
 
 export default loggedReducer;
